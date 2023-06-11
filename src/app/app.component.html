@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-6">
+      <div class="quize-box" *ngIf="gameEnd; else result">
+        <div [ngClass]="status ? 'timmer' : 'timmer2'" class="timmer"><p>Time: <span id="time">{{timer}}</span> sec</p></div>
+        <h3>{{singleValue.question}}</h3>
+        <div class="quiz-option">
+          <ul>
+          <li><input [(ngModel)]="opquiz" (change)="optiVal(singleValue.option01)" value="{{singleValue.option01}}" id="bnt01" type="radio" class="option-quiz" name="opquiz">
+          <label for="bnt01">{{singleValue.option01}}</label></li>
+          <li><input [(ngModel)]="opquiz" (change)="optiVal(singleValue.option02)" value="{{singleValue.option02}}" id="bnt02" type="radio" class="option-quiz" name="opquiz">
+          <label for="bnt02">{{singleValue.option02}}</label></li>
+          <li><input [(ngModel)]="opquiz" (change)="optiVal(singleValue.option03)" value="{{singleValue.option03}}" id="bnt03" type="radio" class="option-quiz" name="opquiz">
+          <label for="bnt03">{{singleValue.option03}}</label></li>
+          <li><input [(ngModel)]="opquiz" (change)="optiVal(singleValue.option04)" value="{{singleValue.option04}}" id="bnt04" type="radio" class="option-quiz" name="opquiz">
+          <label for="bnt04">{{singleValue.option04}}</label></li>
+        </ul>
+        <div class="d-flex justify-content-end"><button (click)="nxtQus()" class="submit" type="submit">Next</button></div>
+        </div>
+      </div>
+      <ng-template #result>
+      <div class="result quize-box" [ngClass]="{fullmark : right==quesLength}">
+        <h2>Thank you for participating the quiz</h2>
+        <p *ngIf="right!=quesLength">You get <strong>{{right}}</strong> out of {{quesLength}}</p>
+        <p class="gotFull" *ngIf="right==quesLength">Congratulation! You are Genius</p>
+        <button *ngIf="right!=quesLength" (click)="goBack()" class="submit">Try Again</button>
+        <button *ngIf="right==quesLength" (click)="goBack()" class="submit">Back</button>
+      </div>
+    </ng-template>
+    </div>
+  </div>
+</div>

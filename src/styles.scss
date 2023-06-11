@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+@import "../node_modules/bootstrap/scss/bootstrap";
+$font-family:'Oswald', sans-serif;
+$bodycolor:linear-gradient(0deg, rgba(3,19,78,1) 0%, rgba(8,94,156,1) 35%, rgba(0,179,255,1) 100%);
+body{height: 100vh;background: $bodycolor; font-family: $font-family; }
+.container,.row{height: 100vh;}
