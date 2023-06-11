@@ -1,0 +1,31 @@
+ {
+    "quize": [
+      {
+        "question": "The Battle of Plassey was fought in",
+        "option01": "1757",
+        "option02": "1782",
+        "option03": "1780",
+        "option04": "1760",
+        "correct": "1757",
+        "id":1
+      },
+      {
+        "question": "Tripitakas are sacred books of",
+        "option01": "Buddhists",
+        "option02": "Hindus",
+        "option03": "Jains",
+        "option04": "None of the above",
+        "correct": "Buddhists",
+        "id":2
+      },
+      {
+        "question": "The treaty of Mangalore was signed between",
+        "option01": "the English East India Company and Haidar Ali",
+        "option02": "the English East India Company and Tipu Sultan",
+        "option03": "Haidar Ali and the Zamorin of Calicut",
+        "option04": "the French East India Company and Tipu Sultan",
+        "correct": "the English East India Company and Tipu Sultan",
+        "id":3
+      }
+    ]
+}
